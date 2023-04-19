@@ -4,19 +4,22 @@ class DioHelper {
   final Dio _dio;
   DioHelper(this._dio);
 
-  Future getData({required String endPoint, String? token}) async {
-    _dio.options.headers = {'authorization': 'Bearer $token'};
-    Response response = await _dio.get(endPoint);
-    return response.data;
+  Future<Response> getData({required String endPoint, String? token}) async {
+    Response response = await _dio.get(endPoint,
+        options: Options(headers: {
+          'authorization': 'Bearer $token',
+        }));
+    return response;
   }
 
-  Future postData(
+  Future<Response> postData(
       {required String endPoint, dynamic data, String? token}) async {
-   return await _dio.post(endPoint,
+    Response response = await _dio.post(endPoint,
         data: data,
         options: Options(headers: {
-          'authorization': token != null ? 'Bearer $token' : '',
+          'authorization': 'Bearer $token',
           'Content-Type': 'application/json'
         }));
+    return response;
   }
 }
