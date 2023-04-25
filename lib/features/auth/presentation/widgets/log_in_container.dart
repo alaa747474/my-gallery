@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_app/core/constants/app_routes.dart';
 import 'package:task_app/core/widgets/custom_button.dart';
-import 'package:task_app/features/auth/business_logic/cubit/auth_cubit.dart';
+import 'package:task_app/features/auth/business_logic/auth_cubit/auth_cubit.dart';
 import 'package:task_app/features/auth/data/cache/app_secure_storage.dart';
 import 'package:task_app/features/auth/presentation/widgets/custom_text_field.dart';
 

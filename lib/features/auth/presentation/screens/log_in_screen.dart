@@ -6,7 +6,7 @@ import 'package:task_app/core/widgets/app_background.dart';
 import 'package:task_app/features/auth/data/repositories/auth_repository.dart';
 import 'package:task_app/features/auth/presentation/widgets/log_in_container.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../business_logic/cubit/auth_cubit.dart';
+import '../../business_logic/auth_cubit/auth_cubit.dart';
 
 class LogInScreen extends StatelessWidget {
   const LogInScreen({super.key});
